@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { StyledButton } from "../../components/button/button.styled";
 
 export const StyledNotFoundContainer = styled.main`
   height: 100vh;
@@ -9,7 +8,8 @@ export const StyledNotFoundContainer = styled.main`
 `;
 
 export const StyledNotFoundImage = styled.img`
-height: 220px;`;
+  height: 220px;
+`;
 
 export const StyledNotFoundTextConatainer = styled.section`
   display: flex;
@@ -20,5 +20,6 @@ export const StyledNotFoundTextConatainer = styled.section`
 `;
 
 export const StyledNotFoundHeading = styled.h1`
-font-size: 2.5rem;
-letter-spacing: 1px;`;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+`;
