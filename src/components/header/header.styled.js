@@ -31,10 +31,13 @@ export const StyledHeaderLogoContainer = styled.div`
   gap: 8px;
 `;
 
-export const StyledLogoIcon = styled.img``;
+export const StyledLogoIcon = styled.img`
+  cursor: pointer;
+`;
 
 export const StyledLogoText = styled.span`
   font-size: 1.2rem;
   font-weight: 600;
+  cursor: pointer;
   margin-bottom: 8px;
-  `;
+`;
