@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { StyledButton } from "../../components/button/button.styled";
 
 export const StyledHomeLayout = styled.div`
@@ -25,7 +25,19 @@ export const StyledCharactersSelectionContainer = styled.section`
 
 export const StyledCharactersSelectionText = styled.span`
   font-size: 22px;
+  text-align: center;
   font-weight: 500;
 `;
 
-export const StyledButton1 = styled(StyledButton)``;
+export const StyledButton1 = styled(StyledButton)`
+  margin-bottom: 20px;
+
+  ${(props) =>
+    props.disabled
+      ? css`
+          cursor: not-allowed;
+        `
+      : css`
+          cursor: pointer;
+        `}
+`;

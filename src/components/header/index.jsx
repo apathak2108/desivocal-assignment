@@ -8,14 +8,22 @@ import {
 } from "./header.styled";
 import { STRINGS } from "../../constants";
 import Logo from "../../assets/logo.svg";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <StyledHeader>
-      <StyledHeaderSectionOne>{STRINGS.HEADER_TEXT}</StyledHeaderSectionOne>
+      <StyledHeaderSectionOne onClick={navigate("/")}>
+        {STRINGS.HEADER_TEXT}
+      </StyledHeaderSectionOne>
       <StyledHeaderSectionTwo>
-        <StyledLogoIcon src={Logo} alt="desivocal-logo" />
-        <StyledLogoText>{STRINGS.DESIVOCAL}</StyledLogoText>
+        <StyledLogoIcon
+          src={Logo}
+          alt="desivocal-logo"
+          onClick={() => navigate("/")}
+        />
+        <StyledLogoText onClick={() => navigate("/")}>{STRINGS.DESIVOCAL}</StyledLogoText>
       </StyledHeaderSectionTwo>
     </StyledHeader>
   );

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledSmallCard = styled.div`
   height: 220px;
@@ -7,7 +7,22 @@ export const StyledSmallCard = styled.div`
   border-radius: 4px;
   margin: 20px;
   position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+
+  ${(props) =>
+    props.isSelected &&
+    css`
+      border: 2px solid #007bff;
+      transform: scale(1.05);
+    `}
+
+  ${(props) =>
+    props.disabled &&
+    css`
+      pointer-events: none;
+      opacity: 0.5;
+    `}
 `;
 
 export const StyledSmallCardImage = styled.img`
